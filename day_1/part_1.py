@@ -1,4 +1,4 @@
-filename = 'input'
+filename = 'input_part_1'
 
 seen = set()
 with open(filename, encoding="utf-8") as f:
