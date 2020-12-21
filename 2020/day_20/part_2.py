@@ -1,6 +1,6 @@
 import re
 
-filename = 'part_1.txt'
+filename = 'part_2.txt'
 
 roles = {}
 process_roles = True
@@ -44,6 +44,8 @@ with open(filename, encoding="utf-8") as f:
                 roles[rule_id] = rule_parts[1:-1]
         elif not role:
             process_roles = False
+            roles[8] = [['42'], ['42', '8']]
+            roles[11] = [['42', '31'], ['42', '11', '31']]
         else:
             match_ = [match == '' for match in validate_rec(roles, 0, role)]
             if any(match_): valid_counter += 1
